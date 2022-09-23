@@ -10,8 +10,13 @@ echo "su estado civil ";
 echo ($_POST["estado"] == "Otro") ? 'no es  <strong>ni Solteo ni Casado</strong>': 'es: '. $_POST["estado"];
 echo "<br>";
 echo "Le gusta: ";
+if($_POST["list"]){
 foreach($_POST["list"] as $value){
     echo "<strong> $value </strong>".",";
 }
+}else{
+    echo "<p style='color red'> no selecciono nada </p>";
+}
+
 echo "<br>";
 echo "<a href='../datos.html'>Volver al Formulario </a>";
